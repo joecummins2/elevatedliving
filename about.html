@@ -20,6 +20,152 @@
   <link href="favicons/android-chrome-192x192.png" rel="icon" type="image/png" sizes="192x192">
   <link href="favicons/android-chrome-512x512.png" rel="icon" type="image/png" sizes="512x512">
   <link href="site.webmanifest" rel="manifest">
+  <style>
+    /* Core Values (ELEVATED) tiles */
+    .values-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .value-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      min-height: 90px;
+    }
+
+    .value-letter {
+      background: #0f9688;
+      color: #fff;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      flex-shrink: 0;
+      border-radius: 4px;
+    }
+
+    .value-text h4 {
+      color: #0f9688;
+      font-size: 20px;
+      margin: 0 0 6px 0;
+      font-weight: 600;
+    }
+
+    .value-text p {
+      color: #666;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* Page-level typography harmonization (About page only) */
+    .heading-2 {
+      font-size: 38px !important;
+      line-height: 1.2 !important;
+    }
+
+    .section-4 .heading {
+      font-size: 36px !important;
+      line-height: 1.25 !important;
+    }
+
+    .text-block-10 {
+      font-size: 18px !important;
+      line-height: 1.6 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      max-width: 100% !important;
+    }
+
+    /* Ensure ethos images fill their card so text width matches image */
+    .div-block-7 img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Responsive styles for Ethos and Core Values sections */
+    @media (max-width: 768px) {
+      .heading {
+        font-size: 36px !important;
+        line-height: 1.2 !important;
+      }
+
+      /* Add safe padding on mobile for Mission Statement container */
+      .section-4 .w-container,
+      .section-4 .w-layout-blockcontainer {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      /* Tweak values list typography and spacing */
+      .values-list { gap: 28px; }
+      .value-text h4 { font-size: 18px; }
+      .value-text p { font-size: 14px; }
+
+      /* Make ethos image + caption stack with matched widths */
+      .div-block-3 { align-items: stretch !important; }
+      .div-block-7 { width: 100% !important; }
+      .text-block-10 { padding-top: 12px !important; }
+
+      /* Bring tile closer to heading */
+      .value-letter { margin-bottom: 8px !important; }
+    }
+    @media (max-width: 1200px) {
+      .ethos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .ethos-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      
+      .ethos-card div {
+        width: 150px !important;
+        height: 100px !important;
+      }
+      
+      .value-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin-bottom: 0 !important;
+        min-height: auto !important;
+      }
+      
+      .value-letter {
+        margin-bottom: 15px !important;
+        margin-right: 0 !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .ethos-card div {
+        width: 120px !important;
+        height: 80px !important;
+      }
+      
+      .value-letter {
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 22px !important;
+      }
+
+      .heading { font-size: 32px !important; }
+      .text-block-10 { font-size: 17px !important; }
+    }
+  </style>
 </head>
 <body class="body-2">
   <section class="section-7">
@@ -68,54 +214,122 @@
   </section>
   <section class="section-2">
     <div class="w-layout-blockcontainer container-2 w-container">
-      <div class="text-block-3">Elevated Living Group is dedicated to achieving promising futures for the children who reside in our homes. We create environments where children feel safe, supported, and understood.</div>
+      <div class="text-block-3">Elevated Living Group was founded with the mission to create promising outcomes for children who come through the
+        care system. Our team of experienced and compassionate professionals are dedicated to providing a nurturing
+        environment where children can feel safe, supported, and understood.</div>
     </div>
   </section>
   <section class="section-4">
     <div class="w-layout-blockcontainer w-container">
       <div>
-        <h2 class="heading">Our Mission</h2>
+        <h2 class="heading">Mission Statement</h2>
       </div>
-      <div class="text-block-3 black">To create homes where every child can grow, heal, and thrive through care that respects their individuality and empowers their potential.</div>
+      <div class="text-block-3 black" style="line-height: 1.6; font-size: 18px">Our mission is to create positive futures for every child in our care. At Elevated Living Group, we are committed to providing the highest quality of care within a warm, safe, and nurturing environment. We believe every child has the potential to thrive, and we aim to empower them to discover their strengths, build their confidence, and shape their own journey. Our purpose is to give children hope, opportunities, and the support they need to reach their goals and achieve their dreams.</div>
     </div>
-    <div class="w-layout-blockcontainer container-3 w-container">
-      <div class="div-block-20">
-        <h2 class="heading">Our Values</h2>
+         <div class="w-layout-blockcontainer container-3 w-container" style="margin-top: 5px !important;">
+       <div class="div-block-20">
+         <h2 class="heading" style="color: #0f9688; text-align: center; margin-bottom: 10px; padding-bottom: 0px !important;">Our Ethos</h2>
+       </div>
+       <div class="text-block-6" style="text-align: center; color: #666; margin-bottom: 20px; padding-top: 15px !important;">Elevated – where care uplifts, resilience is nurtured, and futures are guided with hope!</div>
+       
+             <!-- Ethos Grid -->
+             <div class="div-block-2">
+              <div class="div-block-3">
+                <div class="div-block-7"><img src="images/Our-Values-Pic-Compassion.jpg" loading="lazy" alt=""></div>
+                <div class="text-block-10">We are a devoted and committed nurturing therapeutic service.</div>
+              </div>
+              <div class="div-block-3">
+                <div class="div-block-7 _1"><img src="images/Our-Values-Pic-Respect.jpg" loading="lazy" alt=""></div>
+                <div class="text-block-10">We have high expectations and aspirations for children to achieve their full potential.</div>
+              </div>
+              <div class="div-block-3">
+                <div class="div-block-7 _2"><img src="images/Our-Values-Pic-Community.jpg" loading="lazy" alt=""></div>
+                <div class="text-block-10">We empower children to reach the destination of their dreams.</div>
+              </div>
+              <div class="div-block-3">
+                <div class="div-block-7 _3"><img src="images/Our-Values-Pic-Growth.jpg" loading="lazy" alt=""></div>
+                <div class="text-block-10">We are passionate and strive for excellence.</div>
+              </div>
+            </div>
+     
+         <!-- Our Core Values Section -->
+    <div class="w-layout-blockcontainer container-3 w-container" style="margin-top: 15px; grid-column-gap: 0px !important; grid-row-gap: 0px !important;">
+      <div class="div-block-20" style="padding-top: 0px !important;">
+        <h2 class="heading" style="color: #0f9688; text-align: center; padding-bottom: 10px !important;">Our Core Values</h2>
       </div>
-      <div class="div-block-2">
-        <div class="div-block-3">
-          <div class="div-block-7"><img src="images/Our-Values-Pic-Compassion.jpg" loading="lazy" alt="" class="image-16"></div>
-          <div>
-            <h4 class="heading-3">Compassion</h4>
-            <div class="text-block-5">Treating every child with kindness and understanding.</div>
-          </div>
-        </div>
-        <div class="div-block-3">
-          <div class="div-block-7 _1"><img src="images/Our-Values-Pic-Respect.jpg" loading="lazy" alt="" class="image-17"></div>
-          <div>
-            <h4 class="heading-3">Respect</h4>
-            <div class="text-block-5">Honouring each child&#x27;s unique journey and background.</div>
-          </div>
-        </div>
-        <div class="div-block-3">
-          <div class="div-block-7 _2"><img src="images/Our-Values-Pic-Growth.jpg" loading="lazy" alt="" class="image-18"></div>
-          <div>
-            <h4 class="heading-3">Growth</h4>
-            <div class="text-block-5">Encouraging personal development through tailored support.</div>
-          </div>
-        </div>
-        <div class="div-block-3">
-          <div class="div-block-7 _3"><img src="images/Our-Values-Pic-Community.jpg" loading="lazy" alt="" class="image-19"></div>
-          <div>
-            <h4 class="heading-3">Community</h4>
-            <div class="text-block-5">Building strong connections and fostering a sense of belonging.</div>
-          </div>
-        </div>
-      </div>
-      <div class="text-block-6">Our dedicated team works closely with families, schools, and healthcare providers to create a holistic support system for every child in our care. Together, we are building a brighter future, one step at a time.</div>
-      <div class="div-block-8"></div>
-    </div>
-  </section>
+       <h3 style="color: #0f9688 !important; font-size: 24px !important; margin-bottom: 0px !important; margin-top: 0px !important; font-weight: 600 !important; text-align: center !important; padding: 0 !important;">ELEVATED</h3>
+       <div class="text-block-6" style="text-align: center; color: #666; margin-bottom: 15px !important; margin-top: 10px !important; padding-top: 0px !important; padding-bottom: 10px !important;">Where care uplifts, resilience is nurtured, and futures are guided with hope!</div>
+       
+       <!-- Core Values List -->
+       <div class="values-list">
+         <div class="value-item">
+           <div class="value-letter">E</div>
+           <div class="value-text">
+             <h4>Empathy</h4>
+             <p>Staff listen to the children's worries, without judgement and acknowledge their feelings!</p>
+           </div>
+         </div>
+         
+         <div class="value-item">
+           <div class="value-letter">L</div>
+           <div class="value-text">
+             <h4>Love</h4>
+             <p>Created with a nurturing environment with warmth and positive reinforcement at the forefront of our minds!</p>
+           </div>
+         </div>
+         
+         <div class="value-item">
+           <div class="value-letter">E</div>
+           <div class="value-text">
+             <h4>Encouragement</h4>
+             <p>We support children in education, recognise and praise their efforts and celebrate progress!</p>
+           </div>
+         </div>
+         
+         <div class="value-item">
+           <div class="value-letter">V</div>
+           <div class="value-text">
+             <h4>Voice</h4>
+             <p>The staff involve the children in making household decisions to show that their voice matters!</p>
+           </div>
+         </div>
+         
+         <div class="value-item">
+           <div class="value-letter">A</div>
+           <div class="value-text">
+             <h4>Advocacy</h4>
+             <p>Staff speak up for the children to ensure their individual needs are met!</p>
+           </div>
+         </div>
+         
+         <div class="value-item">
+           <div class="value-letter">T</div>
+           <div class="value-text">
+             <h4>Trust</h4>
+             <p>Building consistent routines for the children in our home so our children feel secure is our daily aim!</p>
+           </div>
+         </div>
+         
+         <div class="value-item">
+           <div class="value-letter">E</div>
+           <div class="value-text">
+             <h4>Empowerment</h4>
+             <p>We encourage our children to develop essential life skills, giving them the tools to make safe choices!</p>
+           </div>
+         </div>
+         
+         <div class="value-item">
+           <div class="value-letter">D</div>
+           <div class="value-text">
+             <h4>Dedication</h4>
+             <p>Our staff remain committed, even during challenging times showing that we will not give up on them!</p>
+           </div>
+         </div>
+       </div>
+       
+       <div class="div-block-8"></div>
+     </div>
+   </section>
   <section class="section-3 contact">
     <div class="w-layout-blockcontainer container-2 w-container">
       <div class="div-block-13">
@@ -247,6 +461,7 @@ textarea {
           </div>
         </div>
       </div>
+      <div class="ofsted-footer"><img src="images/Ofsted-logo.png" alt="Ofsted Registered"></div>
     </div>
   </section>
   <section class="section-5">

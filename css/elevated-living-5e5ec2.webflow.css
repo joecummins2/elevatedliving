@@ -505,6 +505,19 @@
   display: flex;
 }
 
+/* Footer Ofsted logo */
+.ofsted-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+}
+
+.ofsted-footer img {
+  width: 160px;
+  height: auto;
+}
+
 .body-2 {
   font-family: Poppins, sans-serif;
 }
